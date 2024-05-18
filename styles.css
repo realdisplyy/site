@@ -28,6 +28,12 @@ body {
 
 header {
     margin-bottom: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 10px;
 }
 
 h1 {
@@ -71,11 +77,6 @@ h1 {
     font-size: 1.8em;
     margin: 10px 0;
     color: #6dd5ed;
-}
-
-.price {
-    font-size: 1.4em;
-    color: #00e676;
 }
 
 .description {
