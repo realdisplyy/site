@@ -12,7 +12,6 @@
     <link rel="icon" href="https://displyy.com/favicon.ico" type="image/x-icon">
     <style>
         body {
-            
             background-color: #121212;
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -89,22 +88,24 @@
             margin-bottom: 30px;
         }
         .buy-button {
-            background: rgba(0, 99, 178, 0.7);
+            background-color: rgba(114, 137, 218, 0.8);
             color: white;
             border: none;
             padding: 15px 30px;
             font-size: 1.2em;
-            border-radius: 10px;
+            border-radius: 15px; /* Slightly more rounded corners */
             cursor: pointer;
-            transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
-            backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+            backdrop-filter: blur(15px); /* Increased blur for a more glassy effect */
             margin-bottom: 80px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(255, 255, 255, 0.4) inset; /* Updated shadow for more depth */
         }
+
         .buy-button:hover {
-            background: rgba(0, 75, 140, 0.8);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+            background-color: rgba(91, 110, 174, 0.8);
+            transform: translateY(-2px);
         }
+
         .product-image {
             display: block;
             margin: 0 auto;
@@ -115,7 +116,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             backdrop-filter: blur(10px);
             background: rgba(126, 123, 123, 0.1);
-            border: 1px solid rgba(74, 74, 77, 0.192)
+            border: 1px solid rgba(74, 74, 77, 0.192);
         }
         .product-image:hover {
             transform: translateY(-20px);
@@ -157,6 +158,44 @@
         }
         .feature h3 {
             margin-top: 0;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+            .title {
+                font-size: 2em;
+            }
+            .logo-container {
+                position: static;
+                transform: none;
+                margin-bottom: 20px;
+            }
+            .discord-link-container {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            .main-content {
+                width: 90%;
+                padding: 20px;
+                margin-top: 20px;
+            }
+            .features {
+                width: 90%;
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                width: 90%;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
