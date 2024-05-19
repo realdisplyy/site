@@ -4,27 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Displyy Mod Menu</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-bottom: 1px solid #333;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        .title, .discord-link-container {
+            flex: 1;
+            text-align: center;
+        }
+        .title {
+            font-size: 2.5em;
+        }
+        .logo-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .logo {
+            height: 80px;
+            border-radius: 50%;
+        }
+        .discord-link {
+            background-color: rgba(114, 137, 218, 0.8);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+            backdrop-filter: blur(5px);
+            width: 150px;
+            display: inline-block;
+            text-align: center;
+        }
+        .discord-link:hover {
+            background-color: rgba(91, 110, 174, 0.8);
+        }
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+            width: 80%;
+            position: relative;
+            margin-top: 50px;
+        }
+        .product-name {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .pricing {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .buy-button {
+            background: rgba(0, 99, 178, 0.7);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            margin-bottom: 80px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .buy-button:hover {
+            background: rgba(0, 75, 140, 0.8);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+        }
+        .product-image {
+            display: block;
+            margin: 0 auto;
+            width: 60%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 0 15px rgba(17, 17, 17, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+            background: rgba(126, 123, 123, 0.1);
+            border: 1px solid rgba(74, 74, 77, 0.192)
+        }
+        .product-image:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4), 0 0 25px rgba(34, 34, 34, 0.8);
+        }
+        .features {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .features h2 {
+            width: 100%;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .feature {
+            background-color: rgba(39, 39, 39, 0.8);
+            width: 45%;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #333;
+            border-radius: 20px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+            background-color: rgba(51, 51, 51, 0.8);
+        }
+        .feature h3 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <header>
+        <div class="title">Displyy</div>
+        <div class="logo-container">
             <img src="logo.png" alt="Displyy Logo" class="logo">
-            <h1>Displyy Mod Menu</h1>
-        </header>
-        <main>
-            <div class="product-image">
-                <img src="product-image.jpg" alt="Displyy Mod Menu">
-            </div>
-            <div class="product-details">
-                <h2>The Best Gorilla Tag Mod Menu</h2>
-                <p class="description">Experience the ultimate mod menu with Displyy. Starting at $5 for a day key and $20 for a lifetime key.</p>
-                <button class="buy-button">Buy Now</button>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Displyy</p>
-        </footer>
+        </div>
+        <div class="discord-link-container">
+            <a href="https://discord.gg/B7qZfxTKrY" target="_blank" class="discord-link">Join Our Discord</a>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="product-name">Displyy Mod Menu</div>
+        <div class="description">The best Gorilla Tag mod menu. Enhance your gameplay with amazing features!</div>
+        <div class="pricing">Starting at $5 for a day key. Lifetime access for $20.</div>
+        <button class="buy-button">Buy Now</button>
+        <img src="product-image.jpg" alt="Displyy Product Image" class="product-image">
     </div>
+    <div class="features">
+        <h2>Features</h2>
+        <div class="feature">
+            <h3>Frequent Updates</h3>
+            <p>Our mod menu is regularly updated to ensure compatibility with the latest game versions and to introduce new features and improvements.</p>
+        </div>
+        <div class="feature">
+            <h3>Tested for Stability</h3>
+            <p>All features are thoroughly tested to ensure a smooth and stable experience, minimizing crashes and bugs during gameplay.</p>
+        </div>
+        <div class="feature">
+            <h3>Enhanced Gameplay</h3>
+            <p>Unlock new abilities and hacks that provide an edge in gameplay, making your Gorilla Tag experience more exciting and dynamic.</p>
+        </div>
+        <div class="feature">
+            <h3>High Security</h3>
+            <p>Our mod menu includes advanced security measures to protect your account and ensure safe usage without risking bans or penalties.</p>
+        </div>
+    </div>
+    
 </body>
 </html>
